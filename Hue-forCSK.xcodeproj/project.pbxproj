@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26463F9D1D7832650011F2DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463F9C1D7832650011F2DB /* main.m */; };
+		26463FA01D7832650011F2DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463F9F1D7832650011F2DB /* AppDelegate.m */; };
+		26463FA61D7832650011F2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26463FA41D7832650011F2DB /* Main.storyboard */; };
+		26463FA91D7832650011F2DB /* Hue_forCSK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26463FA71D7832650011F2DB /* Hue_forCSK.xcdatamodeld */; };
+		26463FAB1D7832650011F2DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26463FAA1D7832650011F2DB /* Assets.xcassets */; };
+		26463FAE1D7832650011F2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26463FAC1D7832650011F2DB /* LaunchScreen.storyboard */; };
+		26463FB91D7832650011F2DB /* Hue_forCSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FB81D7832650011F2DB /* Hue_forCSKTests.m */; };
+		26463FC41D7832650011F2DB /* Hue_forCSKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FC31D7832650011F2DB /* Hue_forCSKUITests.m */; };
+		26463FD21D7832F60011F2DB /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26463FD11D7832F60011F2DB /* HueSDK_iOS.framework */; };
+		26463FE31D7833200011F2DB /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FD51D7833200011F2DB /* DDAbstractDatabaseLogger.m */; };
+		26463FE41D7833200011F2DB /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FD71D7833200011F2DB /* DDASLLogger.m */; };
+		26463FE51D7833200011F2DB /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FD91D7833200011F2DB /* DDFileLogger.m */; };
+		26463FE61D7833200011F2DB /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FDB1D7833200011F2DB /* DDLog.m */; };
+		26463FE71D7833200011F2DB /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FDD1D7833200011F2DB /* DDTTYLogger.m */; };
+		26463FE81D7833200011F2DB /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FE01D7833200011F2DB /* ContextFilterLogFormatter.m */; };
+		26463FE91D7833200011F2DB /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FE21D7833200011F2DB /* DispatchQueueLogFormatter.m */; };
+		26463FEC1D7838CA0011F2DB /* XDControlLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FEB1D7838CA0011F2DB /* XDControlLightViewController.m */; };
+		26463FEF1D7852260011F2DB /* XDBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FEE1D7852260011F2DB /* XDBridgePushLinkViewController.m */; };
+		26463FF21D78611F0011F2DB /* XDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FF11D78611F0011F2DB /* XDLoadingView.m */; };
+		26B9D92A1D9D0992008666F8 /* so_hptimer.c in Sources */ = {isa = PBXBuildFile; fileRef = 26B9D9281D9D0992008666F8 /* so_hptimer.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26463FB51D7832650011F2DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26463F901D7832650011F2DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26463F971D7832650011F2DB;
+			remoteInfo = "Hue-forCSK";
+		};
+		26463FC01D7832650011F2DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26463F901D7832650011F2DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26463F971D7832650011F2DB;
+			remoteInfo = "Hue-forCSK";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26463F981D7832650011F2DB /* Hue-forCSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hue-forCSK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26463F9C1D7832650011F2DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26463F9E1D7832650011F2DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26463F9F1D7832650011F2DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26463FA51D7832650011F2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26463FA81D7832650011F2DB /* Hue_forCSK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hue_forCSK.xcdatamodel; sourceTree = "<group>"; };
+		26463FAA1D7832650011F2DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26463FAD1D7832650011F2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26463FAF1D7832650011F2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26463FB41D7832650011F2DB /* Hue-forCSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hue-forCSKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26463FB81D7832650011F2DB /* Hue_forCSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hue_forCSKTests.m; sourceTree = "<group>"; };
+		26463FBA1D7832650011F2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26463FBF1D7832650011F2DB /* Hue-forCSKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hue-forCSKUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26463FC31D7832650011F2DB /* Hue_forCSKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hue_forCSKUITests.m; sourceTree = "<group>"; };
+		26463FC51D7832650011F2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26463FD11D7832F60011F2DB /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
+		26463FD41D7833200011F2DB /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		26463FD51D7833200011F2DB /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		26463FD61D7833200011F2DB /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		26463FD71D7833200011F2DB /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		26463FD81D7833200011F2DB /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		26463FD91D7833200011F2DB /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		26463FDA1D7833200011F2DB /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		26463FDB1D7833200011F2DB /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		26463FDC1D7833200011F2DB /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		26463FDD1D7833200011F2DB /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		26463FDF1D7833200011F2DB /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		26463FE01D7833200011F2DB /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		26463FE11D7833200011F2DB /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		26463FE21D7833200011F2DB /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		26463FEA1D7838CA0011F2DB /* XDControlLightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDControlLightViewController.h; sourceTree = "<group>"; };
+		26463FEB1D7838CA0011F2DB /* XDControlLightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDControlLightViewController.m; sourceTree = "<group>"; };
+		26463FED1D7852260011F2DB /* XDBridgePushLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDBridgePushLinkViewController.h; sourceTree = "<group>"; };
+		26463FEE1D7852260011F2DB /* XDBridgePushLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDBridgePushLinkViewController.m; sourceTree = "<group>"; };
+		26463FF01D78611F0011F2DB /* XDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDLoadingView.h; sourceTree = "<group>"; };
+		26463FF11D78611F0011F2DB /* XDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDLoadingView.m; sourceTree = "<group>"; };
+		26B9D9281D9D0992008666F8 /* so_hptimer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = so_hptimer.c; sourceTree = "<group>"; };
+		26B9D9291D9D0992008666F8 /* so_hptimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = so_hptimer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26463F951D7832650011F2DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26463FD21D7832F60011F2DB /* HueSDK_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FB11D7832650011F2DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FBC1D7832650011F2DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26463F8F1D7832650011F2DB = {
+			isa = PBXGroup;
+			children = (
+				26463F9A1D7832650011F2DB /* Hue-forCSK */,
+				26463FB71D7832650011F2DB /* Hue-forCSKTests */,
+				26463FC21D7832650011F2DB /* Hue-forCSKUITests */,
+				26463F991D7832650011F2DB /* Products */,
+				26463FD31D7833200011F2DB /* Lumberjack */,
+				26463FD11D7832F60011F2DB /* HueSDK_iOS.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		26463F991D7832650011F2DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26463F981D7832650011F2DB /* Hue-forCSK.app */,
+				26463FB41D7832650011F2DB /* Hue-forCSKTests.xctest */,
+				26463FBF1D7832650011F2DB /* Hue-forCSKUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26463F9A1D7832650011F2DB /* Hue-forCSK */ = {
+			isa = PBXGroup;
+			children = (
+				26B9D9281D9D0992008666F8 /* so_hptimer.c */,
+				26B9D9291D9D0992008666F8 /* so_hptimer.h */,
+				26463F9E1D7832650011F2DB /* AppDelegate.h */,
+				26463F9F1D7832650011F2DB /* AppDelegate.m */,
+				26463FA41D7832650011F2DB /* Main.storyboard */,
+				26463FAA1D7832650011F2DB /* Assets.xcassets */,
+				26463FAC1D7832650011F2DB /* LaunchScreen.storyboard */,
+				26463FAF1D7832650011F2DB /* Info.plist */,
+				26463FA71D7832650011F2DB /* Hue_forCSK.xcdatamodeld */,
+				26463F9B1D7832650011F2DB /* Supporting Files */,
+				26463FEA1D7838CA0011F2DB /* XDControlLightViewController.h */,
+				26463FEB1D7838CA0011F2DB /* XDControlLightViewController.m */,
+				26463FED1D7852260011F2DB /* XDBridgePushLinkViewController.h */,
+				26463FEE1D7852260011F2DB /* XDBridgePushLinkViewController.m */,
+				26463FF01D78611F0011F2DB /* XDLoadingView.h */,
+				26463FF11D78611F0011F2DB /* XDLoadingView.m */,
+			);
+			path = "Hue-forCSK";
+			sourceTree = "<group>";
+		};
+		26463F9B1D7832650011F2DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26463F9C1D7832650011F2DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26463FB71D7832650011F2DB /* Hue-forCSKTests */ = {
+			isa = PBXGroup;
+			children = (
+				26463FB81D7832650011F2DB /* Hue_forCSKTests.m */,
+				26463FBA1D7832650011F2DB /* Info.plist */,
+			);
+			path = "Hue-forCSKTests";
+			sourceTree = "<group>";
+		};
+		26463FC21D7832650011F2DB /* Hue-forCSKUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26463FC31D7832650011F2DB /* Hue_forCSKUITests.m */,
+				26463FC51D7832650011F2DB /* Info.plist */,
+			);
+			path = "Hue-forCSKUITests";
+			sourceTree = "<group>";
+		};
+		26463FD31D7833200011F2DB /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				26463FD41D7833200011F2DB /* DDAbstractDatabaseLogger.h */,
+				26463FD51D7833200011F2DB /* DDAbstractDatabaseLogger.m */,
+				26463FD61D7833200011F2DB /* DDASLLogger.h */,
+				26463FD71D7833200011F2DB /* DDASLLogger.m */,
+				26463FD81D7833200011F2DB /* DDFileLogger.h */,
+				26463FD91D7833200011F2DB /* DDFileLogger.m */,
+				26463FDA1D7833200011F2DB /* DDLog.h */,
+				26463FDB1D7833200011F2DB /* DDLog.m */,
+				26463FDC1D7833200011F2DB /* DDTTYLogger.h */,
+				26463FDD1D7833200011F2DB /* DDTTYLogger.m */,
+				26463FDE1D7833200011F2DB /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		26463FDE1D7833200011F2DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26463FDF1D7833200011F2DB /* ContextFilterLogFormatter.h */,
+				26463FE01D7833200011F2DB /* ContextFilterLogFormatter.m */,
+				26463FE11D7833200011F2DB /* DispatchQueueLogFormatter.h */,
+				26463FE21D7833200011F2DB /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26463F971D7832650011F2DB /* Hue-forCSK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26463FC81D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSK" */;
+			buildPhases = (
+				26463F941D7832650011F2DB /* Sources */,
+				26463F951D7832650011F2DB /* Frameworks */,
+				26463F961D7832650011F2DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hue-forCSK";
+			productName = "Hue-forCSK";
+			productReference = 26463F981D7832650011F2DB /* Hue-forCSK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26463FB31D7832650011F2DB /* Hue-forCSKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26463FCB1D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSKTests" */;
+			buildPhases = (
+				26463FB01D7832650011F2DB /* Sources */,
+				26463FB11D7832650011F2DB /* Frameworks */,
+				26463FB21D7832650011F2DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26463FB61D7832650011F2DB /* PBXTargetDependency */,
+			);
+			name = "Hue-forCSKTests";
+			productName = "Hue-forCSKTests";
+			productReference = 26463FB41D7832650011F2DB /* Hue-forCSKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26463FBE1D7832650011F2DB /* Hue-forCSKUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26463FCE1D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSKUITests" */;
+			buildPhases = (
+				26463FBB1D7832650011F2DB /* Sources */,
+				26463FBC1D7832650011F2DB /* Frameworks */,
+				26463FBD1D7832650011F2DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26463FC11D7832650011F2DB /* PBXTargetDependency */,
+			);
+			name = "Hue-forCSKUITests";
+			productName = "Hue-forCSKUITests";
+			productReference = 26463FBF1D7832650011F2DB /* Hue-forCSKUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26463F901D7832650011F2DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Gai;
+				TargetAttributes = {
+					26463F971D7832650011F2DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F64YC57VZW;
+					};
+					26463FB31D7832650011F2DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F64YC57VZW;
+						TestTargetID = 26463F971D7832650011F2DB;
+					};
+					26463FBE1D7832650011F2DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F64YC57VZW;
+						TestTargetID = 26463F971D7832650011F2DB;
+					};
+				};
+			};
+			buildConfigurationList = 26463F931D7832650011F2DB /* Build configuration list for PBXProject "Hue-forCSK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26463F8F1D7832650011F2DB;
+			productRefGroup = 26463F991D7832650011F2DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26463F971D7832650011F2DB /* Hue-forCSK */,
+				26463FB31D7832650011F2DB /* Hue-forCSKTests */,
+				26463FBE1D7832650011F2DB /* Hue-forCSKUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26463F961D7832650011F2DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26463FAE1D7832650011F2DB /* LaunchScreen.storyboard in Resources */,
+				26463FAB1D7832650011F2DB /* Assets.xcassets in Resources */,
+				26463FA61D7832650011F2DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FB21D7832650011F2DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FBD1D7832650011F2DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26463F941D7832650011F2DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26463FA91D7832650011F2DB /* Hue_forCSK.xcdatamodeld in Sources */,
+				26463FE41D7833200011F2DB /* DDASLLogger.m in Sources */,
+				26463FEF1D7852260011F2DB /* XDBridgePushLinkViewController.m in Sources */,
+				26463FE81D7833200011F2DB /* ContextFilterLogFormatter.m in Sources */,
+				26463FE71D7833200011F2DB /* DDTTYLogger.m in Sources */,
+				26463FE51D7833200011F2DB /* DDFileLogger.m in Sources */,
+				26463FE61D7833200011F2DB /* DDLog.m in Sources */,
+				26463FA01D7832650011F2DB /* AppDelegate.m in Sources */,
+				26463FE91D7833200011F2DB /* DispatchQueueLogFormatter.m in Sources */,
+				26463FF21D78611F0011F2DB /* XDLoadingView.m in Sources */,
+				26463FEC1D7838CA0011F2DB /* XDControlLightViewController.m in Sources */,
+				26463F9D1D7832650011F2DB /* main.m in Sources */,
+				26463FE31D7833200011F2DB /* DDAbstractDatabaseLogger.m in Sources */,
+				26B9D92A1D9D0992008666F8 /* so_hptimer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FB01D7832650011F2DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26463FB91D7832650011F2DB /* Hue_forCSKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26463FBB1D7832650011F2DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26463FC41D7832650011F2DB /* Hue_forCSKUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26463FB61D7832650011F2DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26463F971D7832650011F2DB /* Hue-forCSK */;
+			targetProxy = 26463FB51D7832650011F2DB /* PBXContainerItemProxy */;
+		};
+		26463FC11D7832650011F2DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26463F971D7832650011F2DB /* Hue-forCSK */;
+			targetProxy = 26463FC01D7832650011F2DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26463FA41D7832650011F2DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26463FA51D7832650011F2DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26463FAC1D7832650011F2DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26463FAD1D7832650011F2DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26463FC61D7832650011F2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		26463FC71D7832650011F2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26463FC91D7832650011F2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Hue-forCSK/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26463FCA1D7832650011F2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Hue-forCSK/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26463FCC1D7832650011F2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Hue-forCSKTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hue-forCSK.app/Hue-forCSK";
+			};
+			name = Debug;
+		};
+		26463FCD1D7832650011F2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Hue-forCSKTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hue-forCSK.app/Hue-forCSK";
+			};
+			name = Release;
+		};
+		26463FCF1D7832650011F2DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Hue-forCSKUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSKUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Hue-forCSK";
+			};
+			name = Debug;
+		};
+		26463FD01D7832650011F2DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Hue-forCSKUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.421.Hue-forCSKUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Hue-forCSK";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26463F931D7832650011F2DB /* Build configuration list for PBXProject "Hue-forCSK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26463FC61D7832650011F2DB /* Debug */,
+				26463FC71D7832650011F2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26463FC81D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26463FC91D7832650011F2DB /* Debug */,
+				26463FCA1D7832650011F2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26463FCB1D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26463FCC1D7832650011F2DB /* Debug */,
+				26463FCD1D7832650011F2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26463FCE1D7832650011F2DB /* Build configuration list for PBXNativeTarget "Hue-forCSKUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26463FCF1D7832650011F2DB /* Debug */,
+				26463FD01D7832650011F2DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26463FA71D7832650011F2DB /* Hue_forCSK.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26463FA81D7832650011F2DB /* Hue_forCSK.xcdatamodel */,
+			);
+			currentVersion = 26463FA81D7832650011F2DB /* Hue_forCSK.xcdatamodel */;
+			path = Hue_forCSK.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 26463F901D7832650011F2DB /* Project object */;
+}
