@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262135921DC77A5000021CCD /* XDCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262135911DC77A5000021CCD /* XDCaptureViewController.m */; };
 		26463F9D1D7832650011F2DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463F9C1D7832650011F2DB /* main.m */; };
 		26463FA01D7832650011F2DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463F9F1D7832650011F2DB /* AppDelegate.m */; };
 		26463FA61D7832650011F2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26463FA41D7832650011F2DB /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		26463FEF1D7852260011F2DB /* XDBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FEE1D7852260011F2DB /* XDBridgePushLinkViewController.m */; };
 		26463FF21D78611F0011F2DB /* XDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26463FF11D78611F0011F2DB /* XDLoadingView.m */; };
 		26B9D92A1D9D0992008666F8 /* so_hptimer.c in Sources */ = {isa = PBXBuildFile; fileRef = 26B9D9281D9D0992008666F8 /* so_hptimer.c */; };
+		26F0846E1DBE3BFA00CC9CB6 /* ConstellationPoint.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F0846D1DBE3BFA00CC9CB6 /* ConstellationPoint.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		262135901DC77A5000021CCD /* XDCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCaptureViewController.h; sourceTree = "<group>"; };
+		262135911DC77A5000021CCD /* XDCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCaptureViewController.m; sourceTree = "<group>"; };
 		26463F981D7832650011F2DB /* Hue-forCSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hue-forCSK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26463F9C1D7832650011F2DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26463F9E1D7832650011F2DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		26463FF11D78611F0011F2DB /* XDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDLoadingView.m; sourceTree = "<group>"; };
 		26B9D9281D9D0992008666F8 /* so_hptimer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = so_hptimer.c; sourceTree = "<group>"; };
 		26B9D9291D9D0992008666F8 /* so_hptimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = so_hptimer.h; sourceTree = "<group>"; };
+		26F0846D1DBE3BFA00CC9CB6 /* ConstellationPoint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ConstellationPoint.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +159,9 @@
 				26463FEE1D7852260011F2DB /* XDBridgePushLinkViewController.m */,
 				26463FF01D78611F0011F2DB /* XDLoadingView.h */,
 				26463FF11D78611F0011F2DB /* XDLoadingView.m */,
+				26F0846D1DBE3BFA00CC9CB6 /* ConstellationPoint.json */,
+				262135901DC77A5000021CCD /* XDCaptureViewController.h */,
+				262135911DC77A5000021CCD /* XDCaptureViewController.m */,
 			);
 			path = "Hue-forCSK";
 			sourceTree = "<group>";
@@ -319,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F0846E1DBE3BFA00CC9CB6 /* ConstellationPoint.json in Resources */,
 				26463FAE1D7832650011F2DB /* LaunchScreen.storyboard in Resources */,
 				26463FAB1D7832650011F2DB /* Assets.xcassets in Resources */,
 				26463FA61D7832650011F2DB /* Main.storyboard in Resources */,
@@ -347,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26463FA91D7832650011F2DB /* Hue_forCSK.xcdatamodeld in Sources */,
+				262135921DC77A5000021CCD /* XDCaptureViewController.m in Sources */,
 				26463FE41D7833200011F2DB /* DDASLLogger.m in Sources */,
 				26463FEF1D7852260011F2DB /* XDBridgePushLinkViewController.m in Sources */,
 				26463FE81D7833200011F2DB /* ContextFilterLogFormatter.m in Sources */,

@@ -20,11 +20,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
+            startingLineNumber = "481"
+            endingLineNumber = "481"
+            landmarkName = "-addSyncFrame:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hue-forCSK/XDControlLightViewController.m"
+            timestampString = "499262779.45265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
+            landmarkName = "-showBasicAlertWithTitle:andMessage:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hue-forCSK/XDControlLightViewController.m"
+            timestampString = "499262779.45265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "490"
+            endingLineNumber = "490"
+            landmarkName = "-showBasicAlertWithTitle:andMessage:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hue-forCSK/XDControlLightViewController.m"
+            timestampString = "499262779.45265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "495"
+            endingLineNumber = "495"
             landmarkName = "-localConnection"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,27 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
-            landmarkName = "-noLocalConnection"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
+            startingLineNumber = "506"
+            endingLineNumber = "506"
             landmarkName = "-notAuthenticated"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "512"
+            endingLineNumber = "512"
             landmarkName = "-doAuthenticated"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "523"
+            endingLineNumber = "523"
             landmarkName = "-pushLinkSuccess"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,27 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
-            landmarkName = "-startConnect"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "538"
+            endingLineNumber = "538"
             landmarkName = "-searchBridge"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,12 +148,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hue-forCSK/XDControlLightViewController.m"
-            timestampString = "499002796.409527"
+            timestampString = "499262779.45265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "408"
-            endingLineNumber = "408"
-            landmarkName = "-searchBridge"
+            startingLineNumber = "503"
+            endingLineNumber = "503"
+            landmarkName = "-notAuthenticated"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
