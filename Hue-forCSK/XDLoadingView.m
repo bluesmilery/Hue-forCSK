@@ -17,8 +17,6 @@
 
 @implementation XDLoadingView
 
-
-
 - (instancetype)initWithString:(NSString *)string {
     
     self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];

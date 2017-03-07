@@ -34,7 +34,7 @@
 }
 
 
-
+// 推送认证链接
 - (void)startPushLink {
     PHNotificationManager *notificationManager = [PHNotificationManager defaultManager];
     [notificationManager registerObject:self withSelector:@selector(authenticationSuccess) forNotification:PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION];
@@ -47,6 +47,7 @@
 
 }
 
+// 认证成功
 - (void)authenticationSuccess {
     [[PHNotificationManager defaultManager] deregisterObjectForAllNotifications:self];
     [self.delegate pushLinkSuccess];

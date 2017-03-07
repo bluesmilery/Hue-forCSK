@@ -9,6 +9,7 @@
 #import "XDControlLightViewController.h"
 #import "XDBridgePushLinkViewController.h"
 #import "XDLoadingView.h"
+#import "XDCaptureViewController.h"
 #import "so_hptimer.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -27,10 +28,12 @@
 
 @property (strong, nonatomic) UISwitch              *switch1;
 @property (strong, nonatomic) UISlider              *slider1;
-@property (strong, nonatomic) UIButton              *CSKButton;
+@property (strong, nonatomic) UIButton              *transmitingButton;
 @property (strong, nonatomic) UIButton              *stopButton;
 @property (strong, nonatomic) UIButton              *decodingButton;
 @property (strong, nonatomic) UITextView            *inputTextView;
+@property (strong, nonatomic) UIButton              *receivingButton;
+@property (strong, nonatomic) UILabel               *originDataLabel;
 
 @property (strong, nonatomic) NSMutableArray        *timeIntervalArray;
 @property (strong, nonatomic) NSString              *dataStream;
@@ -49,7 +52,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:20.0/255 green:20.0/255 blue:20.0/255 alpha:1.0];
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:20.0/255 green:20.0/255 blue:20.0/255 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     
     // 启用监听
@@ -85,6 +89,18 @@
     [placeHolderLabel sizeToFit];
     [_inputTextView addSubview:placeHolderLabel];
     [_inputTextView setValue:placeHolderLabel forKey:@"_placeholderLabel"];
+    
+    _receivingButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 100, 30)];
+    [_receivingButton setTitle:@"接收" forState:UIControlStateNormal];
+    [_receivingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_receivingButton addTarget:self action:@selector(beginReceptionAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_receivingButton];
+    
+    _originDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 310, SCREEN_WIDTH, 100)];
+    _originDataLabel.textColor = [UIColor blackColor];
+    _originDataLabel.text = @"发送的数据流为：";
+    _originDataLabel.numberOfLines = 10;
+    [self.view addSubview:_originDataLabel];
 
 }
 
@@ -103,13 +119,13 @@
 }
 
 - (void)setUIForCSK {
-    _CSKButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 100, 10)];
-    [_CSKButton setTitle:@"发送" forState:UIControlStateNormal];
-    [_CSKButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_CSKButton addTarget:self action:@selector(beginTransmissionAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_CSKButton];
+    _transmitingButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 0.2, 90, SCREEN_WIDTH * 0.2, 30)];
+    [_transmitingButton setTitle:@"发送" forState:UIControlStateNormal];
+    [_transmitingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_transmitingButton addTarget:self action:@selector(beginTransmissionAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_transmitingButton];
     
-    _stopButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 100, 100, 10)];
+    _stopButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 0.6, 90, SCREEN_WIDTH * 0.2, 30)];
     [_stopButton setTitle:@"停止" forState:UIControlStateNormal];
     [_stopButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_stopButton addTarget:self action:@selector(stopTransmissionAction) forControlEvents:UIControlEventTouchUpInside];
@@ -138,7 +154,7 @@
 - (void)brightnessChangeLight1:(UISlider *)sender {
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     NSArray *allLights = [cache.lights allValues];
-    PHLight *light1 = allLights[1];
+    PHLight *light1 = allLights[0];
     PHLightState *state = [[PHLightState alloc] init];
     state.brightness = [NSNumber numberWithInt:(int)sender.value];
     self.currentBrightness = state.brightness;
@@ -155,7 +171,7 @@
 - (void)switchChangeLight1:(UISwitch *)sender {
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     NSArray *allLights = [cache.lights allValues];
-    PHLight *light1 = allLights[1];
+    PHLight *light1 = allLights[0];
     PHLightState *state = [[PHLightState alloc] init];
     state.on = [NSNumber numberWithBool:sender.on];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
@@ -175,14 +191,14 @@
  使用CSK信号发送数据
  */
 - (void)beginTransmissionAction {
-    NSLog(@"CSKButton");
-    self.CSKButton.enabled = NO;
+    NSLog(@"transmitingButton");
+    self.transmitingButton.enabled = NO;
     self.stopButton.enabled = YES;
     self.timeIntervalArray = [[NSMutableArray alloc] init];
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     NSArray *allLights = [cache.lights allValues];
-    PHLight *light1 = allLights[1];
+    PHLight *light1 = allLights[0];
     PHLightState *oldState = light1.lightState;
     self.currentBrightness = oldState.brightness;
     PHLightState *state = [[PHLightState alloc] init];
@@ -193,13 +209,13 @@
     NSLog(@"%@",self.dataStream);
     if (self.dataStream.length == 0) {
         [self showBasicAlertWithTitle:@"提示" andMessage:@"请输入需要发送的内容"];
-        self.CSKButton.enabled = YES;
+        self.transmitingButton.enabled = YES;
         return;
     }
     
     if (self.selectedCSKOrder == 0) {
         [self showBasicAlertWithTitle:@"提示" andMessage:@"请选择CSK调制阶数"];
-        self.CSKButton.enabled = YES;
+        self.transmitingButton.enabled = YES;
         return;
     }
     NSInteger symbolLength = log2(self.selectedCSKOrder);
@@ -223,7 +239,7 @@
     __block NSInteger count = 0;
     
     // 定时发送数据
-    so_hptimer_create(&mHPTimer, 0.1 * NSEC_PER_SEC);
+    so_hptimer_create(&mHPTimer, 1 * NSEC_PER_SEC);
     so_hptimer_set_action(mHPTimer, ^{
         NSString *oneSymbol = [weakSelf.dataStream substringWithRange:NSMakeRange(count, symbolLength)];
         count = count + symbolLength;
@@ -265,7 +281,7 @@
 - (void)stopTransmissionAction {
     
     so_hptimer_suspend(mHPTimer);
-    _CSKButton.enabled = YES;
+    _transmitingButton.enabled = YES;
     double sum = 0;
     double max = 0;
     double min = 1;
@@ -327,7 +343,7 @@
  */
 - (CGPoint)colorCoding:(NSString *)symbol {
     CGPoint constellationPoint;
-    NSDictionary *allConstellationPoints = [self getConstellationData];
+    NSDictionary *allConstellationPoints = [XDControlLightViewController getConstellationData];
     NSDictionary *onePoint =  [allConstellationPoints objectForKey:symbol];
     constellationPoint.x = [[onePoint objectForKey:@"x"] floatValue];
     constellationPoint.y = [[onePoint objectForKey:@"y"] floatValue];
@@ -340,7 +356,7 @@
 
  @return 以字典的形式返回星座点数据
  */
-- (NSDictionary *)getConstellationData {
++ (NSDictionary *)getConstellationData {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"ConstellationPoint" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -362,6 +378,7 @@
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         self.dataStream = [self convertTextToDataStream:textView.text];
+        self.originDataLabel.text = [@"发送的数据流为：" stringByAppendingString:self.dataStream];
         return NO;
     }
     return YES;
@@ -474,12 +491,11 @@
 - (NSString *)addSyncFrame:(NSString *)dataStream {
     
     NSString *syncFrame = @"";
-    syncFrame = [syncFrame stringByPaddingToLength:8 withString:@"1" startingAtIndex:0];
+    syncFrame = [syncFrame stringByPaddingToLength:16 withString:@"1" startingAtIndex:0];
     dataStream = [dataStream stringByAppendingString:syncFrame];
     
     return dataStream;
 }
-
 
 #pragma mark - Private method
 
@@ -488,6 +504,11 @@
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) { }];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)beginReceptionAction {
+    XDCaptureViewController *captureViewController = [[XDCaptureViewController alloc] init];
+    [self presentViewController:captureViewController animated:YES completion:nil];
 }
 
 #pragma mark - Hue SDK
@@ -548,7 +569,7 @@
         
         if (bridgesFound.count > 0) {
             NSArray *sortedKeys = [bridgesFound.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
-            NSString *bridgeID = sortedKeys[1];
+            NSString *bridgeID = sortedKeys[0];
             NSString *ip = bridgesFound[bridgeID];
             [self showLoadingView:@"Connecting..."];
             [UIAppDelegate.phHueSDK setBridgeToUseWithId:bridgeID ipAddress:ip];

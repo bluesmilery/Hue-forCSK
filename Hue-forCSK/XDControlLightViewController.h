@@ -11,4 +11,6 @@
 
 @interface XDControlLightViewController : UIViewController
 
++ (NSDictionary *)getConstellationData;
+
 @end
